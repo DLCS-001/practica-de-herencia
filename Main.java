@@ -1,5 +1,4 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     public static void main(String[] args) {
         Recomendacion rec1 = new Recomendacion("Interestelar");
@@ -12,6 +11,13 @@ public class Main {
         menu.mostrarElemento(rec1.mostrar());
         menu.mostrarElemento(rec2.mostrar());
         menu.mostrarElemento(rec3.mostrar());
-        menu.mostrarElemento(rec4.mostrar()); // Mostrar recomendación por edad
+        menu.mostrarElemento(rec4.mostrar());
+
+        System.out.println("\n=== Listas de películas ===");
+        RecomendacionPorGenero.mostrarLista();
+        System.out.println();
+        RecomendacionPopular.mostrarLista();
+        System.out.println();
+        RecomendacionPorEdad.mostrarLista();
     }
 }

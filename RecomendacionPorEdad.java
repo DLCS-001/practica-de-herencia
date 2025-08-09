@@ -1,5 +1,6 @@
 public class RecomendacionPorEdad extends Recomendacion {
     int edad;
+    static String[] peliculasPorEdad = {"El Rey León", "Buscando a Nemo", "Zootopia"}; // Lista para niños
 
     public RecomendacionPorEdad(String titulo, int edad) {
         super(titulo); // Llama al constructor de la clase padre
@@ -10,7 +11,11 @@ public class RecomendacionPorEdad extends Recomendacion {
     public String mostrar() {
         return "Recomendado para mayores de " + edad + " años: " + titulo;
     }
-}
 
-//@Override: Esto indica que estamos sobrescribiendo el método de la clase padre.
-// extends Recomendacion: Esto hace que RecomendacionPorEdad herede de Recomendacion, por lo que tiene acceso a la variable titulo y al método mostrar().
+    public static void mostrarLista() {
+        System.out.println("Películas recomendadas para niños:");
+        for (String pelicula : peliculasPorEdad) {
+            System.out.println("- " + pelicula);
+        }
+    }
+}
